@@ -1,0 +1,7 @@
+INFO     Test_UserProfile:test_UserProfile.py:63 *** opening browser ***
+INFO     Test_UserProfile:test_UserProfile.py:65 test_user_login_002 is started
+INFO     Test_UserProfile:test_UserProfile.py:67 go to url
+INFO     Test_UserProfile:test_UserProfile.py:69 enter email
+INFO     Test_UserProfile:test_UserProfile.py:71 enter password
+INFO     Test_UserProfile:test_UserProfile.py:73 click on login button
+INFO     Test_UserProfile:test_UserProfile.py:76 test_user_login_002 is pass

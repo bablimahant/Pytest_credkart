@@ -1,0 +1,7 @@
+[32mINFO    [0m Test_UserProfile:test_userprofile_params.py:53 *** opening browser ***
+[32mINFO    [0m Test_UserProfile:test_userprofile_params.py:55 test_user_login_004 is started
+[32mINFO    [0m Test_UserProfile:test_userprofile_params.py:57 go to url
+[32mINFO    [0m Test_UserProfile:test_userprofile_params.py:59 enter email
+[32mINFO    [0m Test_UserProfile:test_userprofile_params.py:61 enter password
+[32mINFO    [0m Test_UserProfile:test_userprofile_params.py:63 click on login button
+[32mINFO    [0m Test_UserProfile:test_userprofile_params.py:66 test_user_login_004 is pass

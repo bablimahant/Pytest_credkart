@@ -1,0 +1,1 @@
+ pytest -v  --browser chrome -m sanity --alluredir="C:\Babli\python_revision_2\Pytest_python_projects\Pytest_credkart_project\Allure_Result"

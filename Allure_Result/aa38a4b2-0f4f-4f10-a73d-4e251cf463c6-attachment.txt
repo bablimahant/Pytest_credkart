@@ -1,0 +1,9 @@
+Launching Chrome browser
+Registration or login  pass
+Registration or login  fail
+Registration or login  fail
+Registration or login  fail
+Registration or login  fail
+Registration or login  fail
+Registration or login  fail
+['Pass', 'Pass', 'Pass', 'Pass']

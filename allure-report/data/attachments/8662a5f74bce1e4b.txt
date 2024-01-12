@@ -1,0 +1,1200 @@
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 1110, in emit
+    msg = self.format(record)
+          ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 953, in format
+    return fmt.format(record)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 690, in format
+    s = self.formatMessage(record)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 659, in formatMessage
+    return self._style.format(record)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 449, in format
+    return self._format(record)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 445, in _format
+    return self._fmt % values
+           ~~~~~~~~~~^~~~~~~~
+ValueError: incomplete format key
+Call stack:
+  File "<string>", line 1, in <module>
+  File "<string>", line 8, in <module>
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\execnet\gateway_base.py", line 1640, in serve
+    WorkerGateway(io=io, id=id, _startcount=2).serve()
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\execnet\gateway_base.py", line 1142, in serve
+    self._execpool.integrate_as_primary_thread()
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\execnet\gateway_base.py", line 343, in integrate_as_primary_thread
+    self._perform_spawn(reply)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\execnet\gateway_base.py", line 361, in _perform_spawn
+    reply.run()
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\execnet\gateway_base.py", line 296, in run
+    self._result = func(*args, **kwargs)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\execnet\gateway_base.py", line 1157, in executetask
+    exec(co, loc)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\xdist\remote.py", line 355, in <module>
+    config.hook.pytest_cmdline_main(config=config)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_hooks.py", line 265, in __call__
+    return self._hookexec(self.name, self.get_hookimpls(), kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_manager.py", line 80, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_callers.py", line 39, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\main.py", line 317, in pytest_cmdline_main
+    return wrap_session(config, _main)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\main.py", line 270, in wrap_session
+    session.exitstatus = doit(config, session) or 0
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\main.py", line 324, in _main
+    config.hook.pytest_runtestloop(session=session)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_hooks.py", line 265, in __call__
+    return self._hookexec(self.name, self.get_hookimpls(), kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_manager.py", line 80, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_callers.py", line 39, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\xdist\remote.py", line 157, in pytest_runtestloop
+    self.run_one_test()
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\xdist\remote.py", line 174, in run_one_test
+    self.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_hooks.py", line 265, in __call__
+    return self._hookexec(self.name, self.get_hookimpls(), kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_manager.py", line 80, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_callers.py", line 39, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\runner.py", line 112, in pytest_runtest_protocol
+    runtestprotocol(item, nextitem=nextitem)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\runner.py", line 131, in runtestprotocol
+    reports.append(call_and_report(item, "call", log))
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\runner.py", line 220, in call_and_report
+    call = call_runtest_hook(item, when, **kwds)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\runner.py", line 259, in call_runtest_hook
+    return CallInfo.from_call(
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\runner.py", line 339, in from_call
+    result: Optional[TResult] = func()
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\runner.py", line 260, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_hooks.py", line 265, in __call__
+    return self._hookexec(self.name, self.get_hookimpls(), kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_manager.py", line 80, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_callers.py", line 39, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\runner.py", line 167, in pytest_runtest_call
+    item.runtest()
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\python.py", line 1789, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_hooks.py", line 265, in __call__
+    return self._hookexec(self.name, self.get_hookimpls(), kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_manager.py", line 80, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_callers.py", line 39, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\python.py", line 195, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "C:\Babli\python_revision_2\Pytest_python_projects\Pytest_credkart_project\testCases\test_userprofile_params.py", line 53, in test_user_login_004
+    self.log.info("*** opening browser ***")
+Message: '*** opening browser ***'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 1110, in emit
+    msg = self.format(record)
+          ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 953, in format
+    return fmt.format(record)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 690, in format
+    s = self.formatMessage(record)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 659, in formatMessage
+    return self._style.format(record)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 449, in format
+    return self._format(record)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 445, in _format
+    return self._fmt % values
+           ~~~~~~~~~~^~~~~~~~
+ValueError: incomplete format key
+Call stack:
+  File "<string>", line 1, in <module>
+  File "<string>", line 8, in <module>
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\execnet\gateway_base.py", line 1640, in serve
+    WorkerGateway(io=io, id=id, _startcount=2).serve()
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\execnet\gateway_base.py", line 1142, in serve
+    self._execpool.integrate_as_primary_thread()
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\execnet\gateway_base.py", line 343, in integrate_as_primary_thread
+    self._perform_spawn(reply)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\execnet\gateway_base.py", line 361, in _perform_spawn
+    reply.run()
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\execnet\gateway_base.py", line 296, in run
+    self._result = func(*args, **kwargs)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\execnet\gateway_base.py", line 1157, in executetask
+    exec(co, loc)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\xdist\remote.py", line 355, in <module>
+    config.hook.pytest_cmdline_main(config=config)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_hooks.py", line 265, in __call__
+    return self._hookexec(self.name, self.get_hookimpls(), kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_manager.py", line 80, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_callers.py", line 39, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\main.py", line 317, in pytest_cmdline_main
+    return wrap_session(config, _main)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\main.py", line 270, in wrap_session
+    session.exitstatus = doit(config, session) or 0
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\main.py", line 324, in _main
+    config.hook.pytest_runtestloop(session=session)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_hooks.py", line 265, in __call__
+    return self._hookexec(self.name, self.get_hookimpls(), kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_manager.py", line 80, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_callers.py", line 39, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\xdist\remote.py", line 157, in pytest_runtestloop
+    self.run_one_test()
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\xdist\remote.py", line 174, in run_one_test
+    self.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_hooks.py", line 265, in __call__
+    return self._hookexec(self.name, self.get_hookimpls(), kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_manager.py", line 80, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_callers.py", line 39, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\runner.py", line 112, in pytest_runtest_protocol
+    runtestprotocol(item, nextitem=nextitem)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\runner.py", line 131, in runtestprotocol
+    reports.append(call_and_report(item, "call", log))
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\runner.py", line 220, in call_and_report
+    call = call_runtest_hook(item, when, **kwds)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\runner.py", line 259, in call_runtest_hook
+    return CallInfo.from_call(
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\runner.py", line 339, in from_call
+    result: Optional[TResult] = func()
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\runner.py", line 260, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_hooks.py", line 265, in __call__
+    return self._hookexec(self.name, self.get_hookimpls(), kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_manager.py", line 80, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_callers.py", line 39, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\runner.py", line 167, in pytest_runtest_call
+    item.runtest()
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\python.py", line 1789, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_hooks.py", line 265, in __call__
+    return self._hookexec(self.name, self.get_hookimpls(), kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_manager.py", line 80, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_callers.py", line 39, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\python.py", line 195, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "C:\Babli\python_revision_2\Pytest_python_projects\Pytest_credkart_project\testCases\test_userprofile_params.py", line 53, in test_user_login_004
+    self.log.info("*** opening browser ***")
+Message: '*** opening browser ***'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 1110, in emit
+    msg = self.format(record)
+          ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 953, in format
+    return fmt.format(record)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 690, in format
+    s = self.formatMessage(record)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 659, in formatMessage
+    return self._style.format(record)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 449, in format
+    return self._format(record)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 445, in _format
+    return self._fmt % values
+           ~~~~~~~~~~^~~~~~~~
+ValueError: incomplete format key
+Call stack:
+  File "<string>", line 1, in <module>
+  File "<string>", line 8, in <module>
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\execnet\gateway_base.py", line 1640, in serve
+    WorkerGateway(io=io, id=id, _startcount=2).serve()
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\execnet\gateway_base.py", line 1142, in serve
+    self._execpool.integrate_as_primary_thread()
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\execnet\gateway_base.py", line 343, in integrate_as_primary_thread
+    self._perform_spawn(reply)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\execnet\gateway_base.py", line 361, in _perform_spawn
+    reply.run()
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\execnet\gateway_base.py", line 296, in run
+    self._result = func(*args, **kwargs)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\execnet\gateway_base.py", line 1157, in executetask
+    exec(co, loc)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\xdist\remote.py", line 355, in <module>
+    config.hook.pytest_cmdline_main(config=config)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_hooks.py", line 265, in __call__
+    return self._hookexec(self.name, self.get_hookimpls(), kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_manager.py", line 80, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_callers.py", line 39, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\main.py", line 317, in pytest_cmdline_main
+    return wrap_session(config, _main)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\main.py", line 270, in wrap_session
+    session.exitstatus = doit(config, session) or 0
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\main.py", line 324, in _main
+    config.hook.pytest_runtestloop(session=session)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_hooks.py", line 265, in __call__
+    return self._hookexec(self.name, self.get_hookimpls(), kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_manager.py", line 80, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_callers.py", line 39, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\xdist\remote.py", line 157, in pytest_runtestloop
+    self.run_one_test()
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\xdist\remote.py", line 174, in run_one_test
+    self.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_hooks.py", line 265, in __call__
+    return self._hookexec(self.name, self.get_hookimpls(), kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_manager.py", line 80, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_callers.py", line 39, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\runner.py", line 112, in pytest_runtest_protocol
+    runtestprotocol(item, nextitem=nextitem)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\runner.py", line 131, in runtestprotocol
+    reports.append(call_and_report(item, "call", log))
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\runner.py", line 220, in call_and_report
+    call = call_runtest_hook(item, when, **kwds)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\runner.py", line 259, in call_runtest_hook
+    return CallInfo.from_call(
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\runner.py", line 339, in from_call
+    result: Optional[TResult] = func()
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\runner.py", line 260, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_hooks.py", line 265, in __call__
+    return self._hookexec(self.name, self.get_hookimpls(), kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_manager.py", line 80, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_callers.py", line 39, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\runner.py", line 167, in pytest_runtest_call
+    item.runtest()
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\python.py", line 1789, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_hooks.py", line 265, in __call__
+    return self._hookexec(self.name, self.get_hookimpls(), kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_manager.py", line 80, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_callers.py", line 39, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\python.py", line 195, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "C:\Babli\python_revision_2\Pytest_python_projects\Pytest_credkart_project\testCases\test_userprofile_params.py", line 55, in test_user_login_004
+    self.log.info("test_user_login_004 is started")
+Message: 'test_user_login_004 is started'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 1110, in emit
+    msg = self.format(record)
+          ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 953, in format
+    return fmt.format(record)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 690, in format
+    s = self.formatMessage(record)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 659, in formatMessage
+    return self._style.format(record)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 449, in format
+    return self._format(record)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 445, in _format
+    return self._fmt % values
+           ~~~~~~~~~~^~~~~~~~
+ValueError: incomplete format key
+Call stack:
+  File "<string>", line 1, in <module>
+  File "<string>", line 8, in <module>
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\execnet\gateway_base.py", line 1640, in serve
+    WorkerGateway(io=io, id=id, _startcount=2).serve()
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\execnet\gateway_base.py", line 1142, in serve
+    self._execpool.integrate_as_primary_thread()
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\execnet\gateway_base.py", line 343, in integrate_as_primary_thread
+    self._perform_spawn(reply)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\execnet\gateway_base.py", line 361, in _perform_spawn
+    reply.run()
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\execnet\gateway_base.py", line 296, in run
+    self._result = func(*args, **kwargs)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\execnet\gateway_base.py", line 1157, in executetask
+    exec(co, loc)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\xdist\remote.py", line 355, in <module>
+    config.hook.pytest_cmdline_main(config=config)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_hooks.py", line 265, in __call__
+    return self._hookexec(self.name, self.get_hookimpls(), kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_manager.py", line 80, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_callers.py", line 39, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\main.py", line 317, in pytest_cmdline_main
+    return wrap_session(config, _main)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\main.py", line 270, in wrap_session
+    session.exitstatus = doit(config, session) or 0
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\main.py", line 324, in _main
+    config.hook.pytest_runtestloop(session=session)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_hooks.py", line 265, in __call__
+    return self._hookexec(self.name, self.get_hookimpls(), kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_manager.py", line 80, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_callers.py", line 39, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\xdist\remote.py", line 157, in pytest_runtestloop
+    self.run_one_test()
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\xdist\remote.py", line 174, in run_one_test
+    self.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_hooks.py", line 265, in __call__
+    return self._hookexec(self.name, self.get_hookimpls(), kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_manager.py", line 80, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_callers.py", line 39, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\runner.py", line 112, in pytest_runtest_protocol
+    runtestprotocol(item, nextitem=nextitem)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\runner.py", line 131, in runtestprotocol
+    reports.append(call_and_report(item, "call", log))
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\runner.py", line 220, in call_and_report
+    call = call_runtest_hook(item, when, **kwds)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\runner.py", line 259, in call_runtest_hook
+    return CallInfo.from_call(
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\runner.py", line 339, in from_call
+    result: Optional[TResult] = func()
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\runner.py", line 260, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_hooks.py", line 265, in __call__
+    return self._hookexec(self.name, self.get_hookimpls(), kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_manager.py", line 80, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_callers.py", line 39, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\runner.py", line 167, in pytest_runtest_call
+    item.runtest()
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\python.py", line 1789, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_hooks.py", line 265, in __call__
+    return self._hookexec(self.name, self.get_hookimpls(), kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_manager.py", line 80, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_callers.py", line 39, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\python.py", line 195, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "C:\Babli\python_revision_2\Pytest_python_projects\Pytest_credkart_project\testCases\test_userprofile_params.py", line 55, in test_user_login_004
+    self.log.info("test_user_login_004 is started")
+Message: 'test_user_login_004 is started'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 1110, in emit
+    msg = self.format(record)
+          ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 953, in format
+    return fmt.format(record)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 690, in format
+    s = self.formatMessage(record)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 659, in formatMessage
+    return self._style.format(record)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 449, in format
+    return self._format(record)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 445, in _format
+    return self._fmt % values
+           ~~~~~~~~~~^~~~~~~~
+ValueError: incomplete format key
+Call stack:
+  File "<string>", line 1, in <module>
+  File "<string>", line 8, in <module>
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\execnet\gateway_base.py", line 1640, in serve
+    WorkerGateway(io=io, id=id, _startcount=2).serve()
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\execnet\gateway_base.py", line 1142, in serve
+    self._execpool.integrate_as_primary_thread()
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\execnet\gateway_base.py", line 343, in integrate_as_primary_thread
+    self._perform_spawn(reply)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\execnet\gateway_base.py", line 361, in _perform_spawn
+    reply.run()
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\execnet\gateway_base.py", line 296, in run
+    self._result = func(*args, **kwargs)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\execnet\gateway_base.py", line 1157, in executetask
+    exec(co, loc)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\xdist\remote.py", line 355, in <module>
+    config.hook.pytest_cmdline_main(config=config)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_hooks.py", line 265, in __call__
+    return self._hookexec(self.name, self.get_hookimpls(), kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_manager.py", line 80, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_callers.py", line 39, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\main.py", line 317, in pytest_cmdline_main
+    return wrap_session(config, _main)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\main.py", line 270, in wrap_session
+    session.exitstatus = doit(config, session) or 0
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\main.py", line 324, in _main
+    config.hook.pytest_runtestloop(session=session)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_hooks.py", line 265, in __call__
+    return self._hookexec(self.name, self.get_hookimpls(), kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_manager.py", line 80, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_callers.py", line 39, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\xdist\remote.py", line 157, in pytest_runtestloop
+    self.run_one_test()
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\xdist\remote.py", line 174, in run_one_test
+    self.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_hooks.py", line 265, in __call__
+    return self._hookexec(self.name, self.get_hookimpls(), kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_manager.py", line 80, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_callers.py", line 39, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\runner.py", line 112, in pytest_runtest_protocol
+    runtestprotocol(item, nextitem=nextitem)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\runner.py", line 131, in runtestprotocol
+    reports.append(call_and_report(item, "call", log))
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\runner.py", line 220, in call_and_report
+    call = call_runtest_hook(item, when, **kwds)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\runner.py", line 259, in call_runtest_hook
+    return CallInfo.from_call(
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\runner.py", line 339, in from_call
+    result: Optional[TResult] = func()
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\runner.py", line 260, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_hooks.py", line 265, in __call__
+    return self._hookexec(self.name, self.get_hookimpls(), kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_manager.py", line 80, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_callers.py", line 39, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\runner.py", line 167, in pytest_runtest_call
+    item.runtest()
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\python.py", line 1789, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_hooks.py", line 265, in __call__
+    return self._hookexec(self.name, self.get_hookimpls(), kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_manager.py", line 80, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_callers.py", line 39, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\python.py", line 195, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "C:\Babli\python_revision_2\Pytest_python_projects\Pytest_credkart_project\testCases\test_userprofile_params.py", line 57, in test_user_login_004
+    self.log.info("go to url")
+Message: 'go to url'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 1110, in emit
+    msg = self.format(record)
+          ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 953, in format
+    return fmt.format(record)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 690, in format
+    s = self.formatMessage(record)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 659, in formatMessage
+    return self._style.format(record)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 449, in format
+    return self._format(record)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 445, in _format
+    return self._fmt % values
+           ~~~~~~~~~~^~~~~~~~
+ValueError: incomplete format key
+Call stack:
+  File "<string>", line 1, in <module>
+  File "<string>", line 8, in <module>
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\execnet\gateway_base.py", line 1640, in serve
+    WorkerGateway(io=io, id=id, _startcount=2).serve()
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\execnet\gateway_base.py", line 1142, in serve
+    self._execpool.integrate_as_primary_thread()
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\execnet\gateway_base.py", line 343, in integrate_as_primary_thread
+    self._perform_spawn(reply)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\execnet\gateway_base.py", line 361, in _perform_spawn
+    reply.run()
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\execnet\gateway_base.py", line 296, in run
+    self._result = func(*args, **kwargs)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\execnet\gateway_base.py", line 1157, in executetask
+    exec(co, loc)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\xdist\remote.py", line 355, in <module>
+    config.hook.pytest_cmdline_main(config=config)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_hooks.py", line 265, in __call__
+    return self._hookexec(self.name, self.get_hookimpls(), kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_manager.py", line 80, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_callers.py", line 39, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\main.py", line 317, in pytest_cmdline_main
+    return wrap_session(config, _main)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\main.py", line 270, in wrap_session
+    session.exitstatus = doit(config, session) or 0
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\main.py", line 324, in _main
+    config.hook.pytest_runtestloop(session=session)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_hooks.py", line 265, in __call__
+    return self._hookexec(self.name, self.get_hookimpls(), kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_manager.py", line 80, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_callers.py", line 39, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\xdist\remote.py", line 157, in pytest_runtestloop
+    self.run_one_test()
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\xdist\remote.py", line 174, in run_one_test
+    self.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_hooks.py", line 265, in __call__
+    return self._hookexec(self.name, self.get_hookimpls(), kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_manager.py", line 80, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_callers.py", line 39, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\runner.py", line 112, in pytest_runtest_protocol
+    runtestprotocol(item, nextitem=nextitem)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\runner.py", line 131, in runtestprotocol
+    reports.append(call_and_report(item, "call", log))
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\runner.py", line 220, in call_and_report
+    call = call_runtest_hook(item, when, **kwds)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\runner.py", line 259, in call_runtest_hook
+    return CallInfo.from_call(
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\runner.py", line 339, in from_call
+    result: Optional[TResult] = func()
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\runner.py", line 260, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_hooks.py", line 265, in __call__
+    return self._hookexec(self.name, self.get_hookimpls(), kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_manager.py", line 80, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_callers.py", line 39, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\runner.py", line 167, in pytest_runtest_call
+    item.runtest()
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\python.py", line 1789, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_hooks.py", line 265, in __call__
+    return self._hookexec(self.name, self.get_hookimpls(), kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_manager.py", line 80, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_callers.py", line 39, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\python.py", line 195, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "C:\Babli\python_revision_2\Pytest_python_projects\Pytest_credkart_project\testCases\test_userprofile_params.py", line 57, in test_user_login_004
+    self.log.info("go to url")
+Message: 'go to url'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 1110, in emit
+    msg = self.format(record)
+          ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 953, in format
+    return fmt.format(record)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 690, in format
+    s = self.formatMessage(record)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 659, in formatMessage
+    return self._style.format(record)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 449, in format
+    return self._format(record)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 445, in _format
+    return self._fmt % values
+           ~~~~~~~~~~^~~~~~~~
+ValueError: incomplete format key
+Call stack:
+  File "<string>", line 1, in <module>
+  File "<string>", line 8, in <module>
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\execnet\gateway_base.py", line 1640, in serve
+    WorkerGateway(io=io, id=id, _startcount=2).serve()
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\execnet\gateway_base.py", line 1142, in serve
+    self._execpool.integrate_as_primary_thread()
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\execnet\gateway_base.py", line 343, in integrate_as_primary_thread
+    self._perform_spawn(reply)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\execnet\gateway_base.py", line 361, in _perform_spawn
+    reply.run()
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\execnet\gateway_base.py", line 296, in run
+    self._result = func(*args, **kwargs)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\execnet\gateway_base.py", line 1157, in executetask
+    exec(co, loc)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\xdist\remote.py", line 355, in <module>
+    config.hook.pytest_cmdline_main(config=config)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_hooks.py", line 265, in __call__
+    return self._hookexec(self.name, self.get_hookimpls(), kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_manager.py", line 80, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_callers.py", line 39, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\main.py", line 317, in pytest_cmdline_main
+    return wrap_session(config, _main)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\main.py", line 270, in wrap_session
+    session.exitstatus = doit(config, session) or 0
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\main.py", line 324, in _main
+    config.hook.pytest_runtestloop(session=session)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_hooks.py", line 265, in __call__
+    return self._hookexec(self.name, self.get_hookimpls(), kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_manager.py", line 80, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_callers.py", line 39, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\xdist\remote.py", line 157, in pytest_runtestloop
+    self.run_one_test()
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\xdist\remote.py", line 174, in run_one_test
+    self.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_hooks.py", line 265, in __call__
+    return self._hookexec(self.name, self.get_hookimpls(), kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_manager.py", line 80, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_callers.py", line 39, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\runner.py", line 112, in pytest_runtest_protocol
+    runtestprotocol(item, nextitem=nextitem)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\runner.py", line 131, in runtestprotocol
+    reports.append(call_and_report(item, "call", log))
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\runner.py", line 220, in call_and_report
+    call = call_runtest_hook(item, when, **kwds)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\runner.py", line 259, in call_runtest_hook
+    return CallInfo.from_call(
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\runner.py", line 339, in from_call
+    result: Optional[TResult] = func()
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\runner.py", line 260, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_hooks.py", line 265, in __call__
+    return self._hookexec(self.name, self.get_hookimpls(), kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_manager.py", line 80, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_callers.py", line 39, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\runner.py", line 167, in pytest_runtest_call
+    item.runtest()
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\python.py", line 1789, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_hooks.py", line 265, in __call__
+    return self._hookexec(self.name, self.get_hookimpls(), kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_manager.py", line 80, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_callers.py", line 39, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\python.py", line 195, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "C:\Babli\python_revision_2\Pytest_python_projects\Pytest_credkart_project\testCases\test_userprofile_params.py", line 59, in test_user_login_004
+    self.log.info("enter email")
+Message: 'enter email'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 1110, in emit
+    msg = self.format(record)
+          ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 953, in format
+    return fmt.format(record)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 690, in format
+    s = self.formatMessage(record)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 659, in formatMessage
+    return self._style.format(record)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 449, in format
+    return self._format(record)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 445, in _format
+    return self._fmt % values
+           ~~~~~~~~~~^~~~~~~~
+ValueError: incomplete format key
+Call stack:
+  File "<string>", line 1, in <module>
+  File "<string>", line 8, in <module>
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\execnet\gateway_base.py", line 1640, in serve
+    WorkerGateway(io=io, id=id, _startcount=2).serve()
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\execnet\gateway_base.py", line 1142, in serve
+    self._execpool.integrate_as_primary_thread()
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\execnet\gateway_base.py", line 343, in integrate_as_primary_thread
+    self._perform_spawn(reply)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\execnet\gateway_base.py", line 361, in _perform_spawn
+    reply.run()
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\execnet\gateway_base.py", line 296, in run
+    self._result = func(*args, **kwargs)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\execnet\gateway_base.py", line 1157, in executetask
+    exec(co, loc)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\xdist\remote.py", line 355, in <module>
+    config.hook.pytest_cmdline_main(config=config)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_hooks.py", line 265, in __call__
+    return self._hookexec(self.name, self.get_hookimpls(), kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_manager.py", line 80, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_callers.py", line 39, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\main.py", line 317, in pytest_cmdline_main
+    return wrap_session(config, _main)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\main.py", line 270, in wrap_session
+    session.exitstatus = doit(config, session) or 0
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\main.py", line 324, in _main
+    config.hook.pytest_runtestloop(session=session)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_hooks.py", line 265, in __call__
+    return self._hookexec(self.name, self.get_hookimpls(), kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_manager.py", line 80, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_callers.py", line 39, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\xdist\remote.py", line 157, in pytest_runtestloop
+    self.run_one_test()
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\xdist\remote.py", line 174, in run_one_test
+    self.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_hooks.py", line 265, in __call__
+    return self._hookexec(self.name, self.get_hookimpls(), kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_manager.py", line 80, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_callers.py", line 39, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\runner.py", line 112, in pytest_runtest_protocol
+    runtestprotocol(item, nextitem=nextitem)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\runner.py", line 131, in runtestprotocol
+    reports.append(call_and_report(item, "call", log))
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\runner.py", line 220, in call_and_report
+    call = call_runtest_hook(item, when, **kwds)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\runner.py", line 259, in call_runtest_hook
+    return CallInfo.from_call(
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\runner.py", line 339, in from_call
+    result: Optional[TResult] = func()
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\runner.py", line 260, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_hooks.py", line 265, in __call__
+    return self._hookexec(self.name, self.get_hookimpls(), kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_manager.py", line 80, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_callers.py", line 39, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\runner.py", line 167, in pytest_runtest_call
+    item.runtest()
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\python.py", line 1789, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_hooks.py", line 265, in __call__
+    return self._hookexec(self.name, self.get_hookimpls(), kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_manager.py", line 80, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_callers.py", line 39, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\python.py", line 195, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "C:\Babli\python_revision_2\Pytest_python_projects\Pytest_credkart_project\testCases\test_userprofile_params.py", line 59, in test_user_login_004
+    self.log.info("enter email")
+Message: 'enter email'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 1110, in emit
+    msg = self.format(record)
+          ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 953, in format
+    return fmt.format(record)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 690, in format
+    s = self.formatMessage(record)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 659, in formatMessage
+    return self._style.format(record)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 449, in format
+    return self._format(record)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 445, in _format
+    return self._fmt % values
+           ~~~~~~~~~~^~~~~~~~
+ValueError: incomplete format key
+Call stack:
+  File "<string>", line 1, in <module>
+  File "<string>", line 8, in <module>
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\execnet\gateway_base.py", line 1640, in serve
+    WorkerGateway(io=io, id=id, _startcount=2).serve()
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\execnet\gateway_base.py", line 1142, in serve
+    self._execpool.integrate_as_primary_thread()
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\execnet\gateway_base.py", line 343, in integrate_as_primary_thread
+    self._perform_spawn(reply)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\execnet\gateway_base.py", line 361, in _perform_spawn
+    reply.run()
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\execnet\gateway_base.py", line 296, in run
+    self._result = func(*args, **kwargs)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\execnet\gateway_base.py", line 1157, in executetask
+    exec(co, loc)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\xdist\remote.py", line 355, in <module>
+    config.hook.pytest_cmdline_main(config=config)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_hooks.py", line 265, in __call__
+    return self._hookexec(self.name, self.get_hookimpls(), kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_manager.py", line 80, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_callers.py", line 39, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\main.py", line 317, in pytest_cmdline_main
+    return wrap_session(config, _main)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\main.py", line 270, in wrap_session
+    session.exitstatus = doit(config, session) or 0
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\main.py", line 324, in _main
+    config.hook.pytest_runtestloop(session=session)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_hooks.py", line 265, in __call__
+    return self._hookexec(self.name, self.get_hookimpls(), kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_manager.py", line 80, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_callers.py", line 39, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\xdist\remote.py", line 157, in pytest_runtestloop
+    self.run_one_test()
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\xdist\remote.py", line 174, in run_one_test
+    self.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_hooks.py", line 265, in __call__
+    return self._hookexec(self.name, self.get_hookimpls(), kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_manager.py", line 80, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_callers.py", line 39, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\runner.py", line 112, in pytest_runtest_protocol
+    runtestprotocol(item, nextitem=nextitem)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\runner.py", line 131, in runtestprotocol
+    reports.append(call_and_report(item, "call", log))
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\runner.py", line 220, in call_and_report
+    call = call_runtest_hook(item, when, **kwds)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\runner.py", line 259, in call_runtest_hook
+    return CallInfo.from_call(
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\runner.py", line 339, in from_call
+    result: Optional[TResult] = func()
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\runner.py", line 260, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_hooks.py", line 265, in __call__
+    return self._hookexec(self.name, self.get_hookimpls(), kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_manager.py", line 80, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_callers.py", line 39, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\runner.py", line 167, in pytest_runtest_call
+    item.runtest()
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\python.py", line 1789, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_hooks.py", line 265, in __call__
+    return self._hookexec(self.name, self.get_hookimpls(), kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_manager.py", line 80, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_callers.py", line 39, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\python.py", line 195, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "C:\Babli\python_revision_2\Pytest_python_projects\Pytest_credkart_project\testCases\test_userprofile_params.py", line 61, in test_user_login_004
+    self.log.info("enter password")
+Message: 'enter password'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 1110, in emit
+    msg = self.format(record)
+          ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 953, in format
+    return fmt.format(record)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 690, in format
+    s = self.formatMessage(record)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 659, in formatMessage
+    return self._style.format(record)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 449, in format
+    return self._format(record)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 445, in _format
+    return self._fmt % values
+           ~~~~~~~~~~^~~~~~~~
+ValueError: incomplete format key
+Call stack:
+  File "<string>", line 1, in <module>
+  File "<string>", line 8, in <module>
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\execnet\gateway_base.py", line 1640, in serve
+    WorkerGateway(io=io, id=id, _startcount=2).serve()
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\execnet\gateway_base.py", line 1142, in serve
+    self._execpool.integrate_as_primary_thread()
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\execnet\gateway_base.py", line 343, in integrate_as_primary_thread
+    self._perform_spawn(reply)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\execnet\gateway_base.py", line 361, in _perform_spawn
+    reply.run()
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\execnet\gateway_base.py", line 296, in run
+    self._result = func(*args, **kwargs)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\execnet\gateway_base.py", line 1157, in executetask
+    exec(co, loc)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\xdist\remote.py", line 355, in <module>
+    config.hook.pytest_cmdline_main(config=config)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_hooks.py", line 265, in __call__
+    return self._hookexec(self.name, self.get_hookimpls(), kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_manager.py", line 80, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_callers.py", line 39, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\main.py", line 317, in pytest_cmdline_main
+    return wrap_session(config, _main)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\main.py", line 270, in wrap_session
+    session.exitstatus = doit(config, session) or 0
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\main.py", line 324, in _main
+    config.hook.pytest_runtestloop(session=session)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_hooks.py", line 265, in __call__
+    return self._hookexec(self.name, self.get_hookimpls(), kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_manager.py", line 80, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_callers.py", line 39, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\xdist\remote.py", line 157, in pytest_runtestloop
+    self.run_one_test()
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\xdist\remote.py", line 174, in run_one_test
+    self.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_hooks.py", line 265, in __call__
+    return self._hookexec(self.name, self.get_hookimpls(), kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_manager.py", line 80, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_callers.py", line 39, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\runner.py", line 112, in pytest_runtest_protocol
+    runtestprotocol(item, nextitem=nextitem)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\runner.py", line 131, in runtestprotocol
+    reports.append(call_and_report(item, "call", log))
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\runner.py", line 220, in call_and_report
+    call = call_runtest_hook(item, when, **kwds)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\runner.py", line 259, in call_runtest_hook
+    return CallInfo.from_call(
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\runner.py", line 339, in from_call
+    result: Optional[TResult] = func()
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\runner.py", line 260, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_hooks.py", line 265, in __call__
+    return self._hookexec(self.name, self.get_hookimpls(), kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_manager.py", line 80, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_callers.py", line 39, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\runner.py", line 167, in pytest_runtest_call
+    item.runtest()
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\python.py", line 1789, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_hooks.py", line 265, in __call__
+    return self._hookexec(self.name, self.get_hookimpls(), kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_manager.py", line 80, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_callers.py", line 39, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\python.py", line 195, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "C:\Babli\python_revision_2\Pytest_python_projects\Pytest_credkart_project\testCases\test_userprofile_params.py", line 61, in test_user_login_004
+    self.log.info("enter password")
+Message: 'enter password'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 1110, in emit
+    msg = self.format(record)
+          ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 953, in format
+    return fmt.format(record)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 690, in format
+    s = self.formatMessage(record)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 659, in formatMessage
+    return self._style.format(record)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 449, in format
+    return self._format(record)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 445, in _format
+    return self._fmt % values
+           ~~~~~~~~~~^~~~~~~~
+ValueError: incomplete format key
+Call stack:
+  File "<string>", line 1, in <module>
+  File "<string>", line 8, in <module>
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\execnet\gateway_base.py", line 1640, in serve
+    WorkerGateway(io=io, id=id, _startcount=2).serve()
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\execnet\gateway_base.py", line 1142, in serve
+    self._execpool.integrate_as_primary_thread()
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\execnet\gateway_base.py", line 343, in integrate_as_primary_thread
+    self._perform_spawn(reply)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\execnet\gateway_base.py", line 361, in _perform_spawn
+    reply.run()
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\execnet\gateway_base.py", line 296, in run
+    self._result = func(*args, **kwargs)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\execnet\gateway_base.py", line 1157, in executetask
+    exec(co, loc)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\xdist\remote.py", line 355, in <module>
+    config.hook.pytest_cmdline_main(config=config)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_hooks.py", line 265, in __call__
+    return self._hookexec(self.name, self.get_hookimpls(), kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_manager.py", line 80, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_callers.py", line 39, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\main.py", line 317, in pytest_cmdline_main
+    return wrap_session(config, _main)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\main.py", line 270, in wrap_session
+    session.exitstatus = doit(config, session) or 0
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\main.py", line 324, in _main
+    config.hook.pytest_runtestloop(session=session)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_hooks.py", line 265, in __call__
+    return self._hookexec(self.name, self.get_hookimpls(), kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_manager.py", line 80, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_callers.py", line 39, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\xdist\remote.py", line 157, in pytest_runtestloop
+    self.run_one_test()
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\xdist\remote.py", line 174, in run_one_test
+    self.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_hooks.py", line 265, in __call__
+    return self._hookexec(self.name, self.get_hookimpls(), kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_manager.py", line 80, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_callers.py", line 39, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\runner.py", line 112, in pytest_runtest_protocol
+    runtestprotocol(item, nextitem=nextitem)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\runner.py", line 131, in runtestprotocol
+    reports.append(call_and_report(item, "call", log))
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\runner.py", line 220, in call_and_report
+    call = call_runtest_hook(item, when, **kwds)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\runner.py", line 259, in call_runtest_hook
+    return CallInfo.from_call(
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\runner.py", line 339, in from_call
+    result: Optional[TResult] = func()
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\runner.py", line 260, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_hooks.py", line 265, in __call__
+    return self._hookexec(self.name, self.get_hookimpls(), kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_manager.py", line 80, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_callers.py", line 39, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\runner.py", line 167, in pytest_runtest_call
+    item.runtest()
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\python.py", line 1789, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_hooks.py", line 265, in __call__
+    return self._hookexec(self.name, self.get_hookimpls(), kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_manager.py", line 80, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_callers.py", line 39, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\python.py", line 195, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "C:\Babli\python_revision_2\Pytest_python_projects\Pytest_credkart_project\testCases\test_userprofile_params.py", line 63, in test_user_login_004
+    self.log.info("click on login button")
+Message: 'click on login button'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 1110, in emit
+    msg = self.format(record)
+          ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 953, in format
+    return fmt.format(record)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 690, in format
+    s = self.formatMessage(record)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 659, in formatMessage
+    return self._style.format(record)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 449, in format
+    return self._format(record)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\logging\__init__.py", line 445, in _format
+    return self._fmt % values
+           ~~~~~~~~~~^~~~~~~~
+ValueError: incomplete format key
+Call stack:
+  File "<string>", line 1, in <module>
+  File "<string>", line 8, in <module>
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\execnet\gateway_base.py", line 1640, in serve
+    WorkerGateway(io=io, id=id, _startcount=2).serve()
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\execnet\gateway_base.py", line 1142, in serve
+    self._execpool.integrate_as_primary_thread()
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\execnet\gateway_base.py", line 343, in integrate_as_primary_thread
+    self._perform_spawn(reply)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\execnet\gateway_base.py", line 361, in _perform_spawn
+    reply.run()
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\execnet\gateway_base.py", line 296, in run
+    self._result = func(*args, **kwargs)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\execnet\gateway_base.py", line 1157, in executetask
+    exec(co, loc)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\xdist\remote.py", line 355, in <module>
+    config.hook.pytest_cmdline_main(config=config)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_hooks.py", line 265, in __call__
+    return self._hookexec(self.name, self.get_hookimpls(), kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_manager.py", line 80, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_callers.py", line 39, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\main.py", line 317, in pytest_cmdline_main
+    return wrap_session(config, _main)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\main.py", line 270, in wrap_session
+    session.exitstatus = doit(config, session) or 0
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\main.py", line 324, in _main
+    config.hook.pytest_runtestloop(session=session)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_hooks.py", line 265, in __call__
+    return self._hookexec(self.name, self.get_hookimpls(), kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_manager.py", line 80, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_callers.py", line 39, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\xdist\remote.py", line 157, in pytest_runtestloop
+    self.run_one_test()
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\xdist\remote.py", line 174, in run_one_test
+    self.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_hooks.py", line 265, in __call__
+    return self._hookexec(self.name, self.get_hookimpls(), kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_manager.py", line 80, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_callers.py", line 39, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\runner.py", line 112, in pytest_runtest_protocol
+    runtestprotocol(item, nextitem=nextitem)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\runner.py", line 131, in runtestprotocol
+    reports.append(call_and_report(item, "call", log))
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\runner.py", line 220, in call_and_report
+    call = call_runtest_hook(item, when, **kwds)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\runner.py", line 259, in call_runtest_hook
+    return CallInfo.from_call(
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\runner.py", line 339, in from_call
+    result: Optional[TResult] = func()
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\runner.py", line 260, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_hooks.py", line 265, in __call__
+    return self._hookexec(self.name, self.get_hookimpls(), kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_manager.py", line 80, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_callers.py", line 39, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\runner.py", line 167, in pytest_runtest_call
+    item.runtest()
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\python.py", line 1789, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_hooks.py", line 265, in __call__
+    return self._hookexec(self.name, self.get_hookimpls(), kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_manager.py", line 80, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pluggy\_callers.py", line 39, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\pramo\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\python.py", line 195, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "C:\Babli\python_revision_2\Pytest_python_projects\Pytest_credkart_project\testCases\test_userprofile_params.py", line 63, in test_user_login_004
+    self.log.info("click on login button")
+Message: 'click on login button'
+Arguments: ()

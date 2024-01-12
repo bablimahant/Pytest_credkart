@@ -1,0 +1,2 @@
+headless mode
+Registration or login  pass

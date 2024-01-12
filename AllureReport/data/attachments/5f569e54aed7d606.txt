@@ -1,0 +1,5 @@
+INFO     Test_UserProfile:test_UserProfile.py:21 *** opening browser***
+INFO     Test_UserProfile:test_UserProfile.py:26 *** test_registration_001 is started***
+INFO     Test_UserProfile:test_UserProfile.py:29 Go to url--> https://automation.credence.in/register
+INFO     Test_UserProfile:test_UserProfile.py:36 enter email 
+INFO     Test_UserProfile:test_UserProfile.py:38 password

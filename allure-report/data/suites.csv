@@ -1,0 +1,8 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Fri Jan 12 15:35:39 IST 2024","Fri Jan 12 15:35:48 IST 2024","8774","testCases","test_userprofile_params","Test_UserProfile","","","test_user_login_004[getDataForLogin0]",""
+"passed","Fri Jan 12 19:44:40 IST 2024","Fri Jan 12 19:44:46 IST 2024","5992","testCases","test_UserProfile","Test_UserProfile","","","test_user_login_002",""
+"failed","Fri Jan 12 15:35:28 IST 2024","Fri Jan 12 15:35:32 IST 2024","3720","testCases","test_userprofile_params","Test_UserProfile","","","test_user_login_004[getDataForLogin2]",""
+"failed","Fri Jan 12 15:35:40 IST 2024","Fri Jan 12 15:35:43 IST 2024","2925","testCases","test_userprofile_params","Test_UserProfile","","","test_user_login_004[getDataForLogin3]",""
+"passed","Fri Jan 12 19:44:49 IST 2024","Fri Jan 12 19:45:02 IST 2024","12569","testCases","test_UsetProfile_DDT","Test_UserProfile_DDT_class","","","test_login_ddt_005",""
+"failed","Fri Jan 12 15:35:19 IST 2024","Fri Jan 12 15:35:25 IST 2024","5460","testCases","test_userprofile_params","Test_UserProfile","","","test_user_login_004[getDataForLogin1]",""
+"broken","Fri Jan 12 15:54:26 IST 2024","Fri Jan 12 15:54:28 IST 2024","2852","testCases","test_UserProfile","Test_UserProfile","","","test_registration_001",""
